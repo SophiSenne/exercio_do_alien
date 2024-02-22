@@ -28,7 +28,7 @@
                 default: 'arcade',
                 arcade: {
                     gravity: { y: 300 },
-                    debug: true
+                    debug: false
                 }
             },
 
@@ -114,18 +114,20 @@
 
             });
 
+
+
         }
 
         function update() {
             
             // a nave move-se para esquerda
             if (teclado.left.isDown){
-                alien.setVelocityX(-150);
+                alien.setVelocityX(-200);
             }
 
             //a nave move-se direita
             else if (teclado.right.isDown){
-                alien.setVelocityX(150);
+                alien.setVelocityX(200);
             }
 
             //manter posição X
@@ -135,7 +137,7 @@
 
             //a nave sobe
             if (teclado.up.isDown){
-                alien.setVelocityY(-150);
+                alien.setVelocityY(-200);
                 ativarTurbo();
             }
             // a nave desce
